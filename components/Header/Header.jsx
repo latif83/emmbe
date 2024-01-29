@@ -101,7 +101,7 @@ export const Header = () => {
             Home
           </Link>
           <Link
-            href="/"
+            href="/portfolio"
             className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
           >
             Our Works
@@ -148,24 +148,30 @@ export const Header = () => {
                 color="red"
               />
             </div>
-            <Link className="mr-3 underline hover:text-red-500" href="/">
-              Home
-            </Link>
-            <Link className="mr-3 underline hover:text-red-500" href="/">
-              Trending
-            </Link>
-            <span className="mr-3 underline hover:text-red-500 cursor-pointer">
-              Categories
-            </span>
             <Link
-              className="mr-3 underline hover:text-red-500"
-              href="/about-us"
-            >
-              About Us
-            </Link>
-            <Link className="underline hover:text-red-500" href="/">
-              Privacy Policy
-            </Link>
+            href="/"
+            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+          >
+            Home
+          </Link>
+          <Link
+            href="/portfolio"
+            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+          >
+            Our Works
+          </Link>
+          <Link
+            href="/"
+            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/"
+            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+          >
+            Our Services
+          </Link>
           </nav>
         )}
     </header>
