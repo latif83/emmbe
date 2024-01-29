@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faArrowRightLong,
+  faBars,
+  faBarsStaggered,
   faBuildingCircleCheck,
   faCalculator,
   faCircleCheck,
@@ -44,8 +46,8 @@ import { Contact } from "./components/Contact/Contact";
 export default function Home() {
   return (
     <div>
-      <header className="bg-white">
-        <div className="md:px-12 px-5 py-3 bg-yellow-400 text-white sm:flex hidden justify-between">
+      <header className="bg-yellow-400">
+        <div className="md:px-12 px-5 py-3 bg-yellow-400 border-b border-dotted text-white sm:flex hidden justify-between">
           <div className="flex gap-6">
             <Link href="/">
               <FontAwesomeIcon
@@ -101,24 +103,30 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="md:px-12 px-5 flex justify-between items-center">
+        <div className="md:px-12 px-2 py-1 flex justify-between items-center">
           <div>
-            <Image src="/logo.png" width={100} height={100} />
+            <Image src="/logo.png" width={120} height={120} className="rounded" />
           </div>
-          <nav className="sm:flex gap-4 hidden">
-            <Link href="/" className="text-md font-light">
+          <nav className="sm:flex gap-6 hidden">
+            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
               Home
             </Link>
-            <Link href="/" className="text-md font-light">
+            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
               Our Works
             </Link>
-            <Link href="/" className="text-md font-light">
+            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
               About Us
             </Link>
-            <Link href="/" className="text-md font-light">
+            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
               Our Services
             </Link>
           </nav>
+          <button
+                      type="button"
+                      className="rounded"
+                    >
+                      <FontAwesomeIcon icon={faBars} width={35} height={35} className="text-2xl" />
+                    </button>
         </div>
       </header>
       <div className={`${styles.banner} text-black`}>
@@ -199,10 +207,10 @@ export default function Home() {
                 className={`${styles.swipeContent} flex items-center justify-center sm:px-12 px-5`}
               >
                 <div className="w-full sm:text-center py-4">
-                  <h1 className="text-white font-bold md:text-5xl text-4xl">
+                  <h1 className="text-white font-bold md:text-5xl text-3xl">
                     Crafting Dreams, Building Legacies
                   </h1>
-                  <p className="mt-4">
+                  <p className="mt-6">
                     Start a construction journey with{" "}
                     <span className="font-bold">EMMBE</span>, where we turn
                     dreams into reality and build lasting legacies. With over 8
@@ -211,7 +219,7 @@ export default function Home() {
                     than just construction – it's a partnership based on trust
                     and shared success.
                   </p>
-                  <div className="mt-4 flex justify-center gap-2">
+                  <div className="mt-5 flex justify-center gap-2">
                     <button
                       type="button"
                       className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
