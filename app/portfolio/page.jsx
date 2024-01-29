@@ -20,13 +20,21 @@ export default function Portfolio() {
     const [slidesPerView,setSlidesPerView] = useState(3)
 
     useEffect(()=>{
-        let windowWidth = window.innerWidth
-        if(windowWidth < 500){
+        const changeSlides = ()=>{
+          let windowWidth = window.innerWidth
+
+          if(windowWidth < 500){
             setSlidesPerView(1.2)
+            return
         }
+        
         if(windowWidth < 700){
             setSlidesPerView(2.2)
         }
+        
+        }
+
+        changeSlides()
     },[])
   return (
     <div className="">
