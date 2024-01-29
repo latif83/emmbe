@@ -1,3 +1,4 @@
+"use client"
 import {
   faFacebook,
   faInstagram,
@@ -34,33 +35,44 @@ import { Contact } from "@/components/Contact/Contact";
 import { Footer } from "@/components/Footer/Footer";
 import { Banner } from "@/components/Banner/banner";
 import { Header } from "@/components/Header/Header";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <Header />
       <Banner />
-      <section
+      <section 
         className={`grid md:grid-cols-3 grid-cols-1 sm:gap-4 gap-8 sm:px-12 px-5 py-7 bg-white ${styles.mission}`}
       >
         <div className="col-span-1 relative z-10 flex justify-center flex-col gap-4">
-          <p className="text-yellow-500 font-bold mb-4">OUR MISSION</p>
-          <h1 className="text-3xl font-bold">QUALITY WORK IS OUR PRIORITY</h1>
-          <p>
+          <motion.p initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }} className="text-yellow-500 font-bold mb-4">OUR MISSION</motion.p>
+          <motion.h1 initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }} className="text-3xl font-bold">QUALITY WORK IS OUR PRIORITY</motion.h1>
+          <motion.p initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}>
             EMMBE Design and Construction Enterprise strives to advance Ghana's
             economy and society through sustainable infrastructure. We
             prioritize quality, cost-effectiveness, and first-className services
             for our customers.
-          </p>
-          <button
+          </motion.p>
+          <motion.button initial={{ opacity: 0, y: -100 , scale:0.5 }}
+                whileInView={{ opacity: 1, y: 0,scale:1 }}
+                transition={{ duration: 1 }}
             type="button"
             className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
           >
             LEARN MORE
-          </button>
+          </motion.button>
         </div>
         <div className="col-span-2 relative z-10 grid grid-cols-2 gap-2 relative">
-          <div
+          <motion.div initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
             className={`col-span-1 bg-black ${styles.wImgCon} rounded overflow-hidden`}
           >
             <Image
@@ -69,8 +81,10 @@ export default function Home() {
               height={500}
               className={styles.wImg}
             />
-          </div>
-          <div
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
             className={`col-span-1 bg-black ${styles.wImgCon} rounded overflow-hidden`}
           >
             <Image
@@ -79,8 +93,11 @@ export default function Home() {
               height={500}
               className={styles.wImg}
             />
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
             className={`col-span-1 bg-black ${styles.wImgCon} rounded overflow-hidden`}
           >
             <Image
@@ -90,8 +107,10 @@ export default function Home() {
               className={styles.wImg}
               style={{ objectPosition: "center" }}
             />
-          </div>
-          <div
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
             className={`col-span-1 bg-black ${styles.wImgCon} rounded overflow-hidden`}
           >
             <Image
@@ -100,8 +119,10 @@ export default function Home() {
               height={500}
               className={styles.wImg}
             />
-          </div>
-          <div className={`${styles.wAbs} flex items-center justify-center`}>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }} className={`${styles.wAbs} flex items-center justify-center`}>
             <div className="rounded-full bg-white sm:px-4 sm:py-12 px-4 py-3 text-center">
               <p className="sm:text-5xl text-3xl font-bold text-yellow-400">
                 8+
@@ -115,13 +136,15 @@ export default function Home() {
                 Experience
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="sm:px-12 px-5">
         <div className={`${styles.ww} flex items-center gap-2 p-5 py-10`}>
-          <div className={`relative z-10 ${styles.wwch1}`}>
+          <motion.div initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }} className={`relative z-10 ${styles.wwch1}`}>
             <h1 className="text-2xl font-bold">
               Building your visions. Creating reality.
             </h1>
@@ -135,8 +158,10 @@ export default function Home() {
             >
               DISCOVER MORE
             </button>
-          </div>
-          <div
+          </motion.div>
+          <motion.div initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
             className={`relative z-10 ${styles.wwch2}`}
             style={{ height: "300px" }}
           >
@@ -156,15 +181,19 @@ export default function Home() {
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="bg-yellow-400 sm:px-12 px-5 py-12">
-        <h1 className="text-white font-bold text-2xl mt-3">
+        <motion.h1 initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }} className="text-white font-bold text-2xl mt-3">
           We offer comprehensive services
-        </h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 sm:mt-10 mt-6">
+        </motion.h1>
+        <motion.div initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }} className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 sm:mt-10 mt-6">
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
               <span className="bg-black text-white inline-block rounded-full px-3 py-4">
@@ -260,8 +289,10 @@ export default function Home() {
               <h1 className="text-lg">Construction Machinery</h1>
             </div>
           </div>
-        </div>
-        <div className="mt-3 flex items-center justify-center">
+        </motion.div>
+        <motion.div initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }} className="mt-3 flex items-center justify-center">
           <button
             type="button"
             className="text-gray-900 bg-gradient-to-r mt-5 from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-lime-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex gap-2"
@@ -274,9 +305,11 @@ export default function Home() {
               className="text-md ml-1"
             />
           </button>
-        </div>
+        </motion.div>
       </section>
-      <section className="bg-white relative sm:px-12 px-5">
+      <motion.section initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }} className="bg-white relative sm:px-12 px-5">
         <div className="bg-yellow-400 p-5 absolute top-0 left-0 w-full z-0"></div>
 
         <div className="relative z-10 bg-white sm:p-12 border-4 border-yellow-400 p-5 rounded">
@@ -342,18 +375,22 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-yellow-400 p-5 absolute bottom-0 left-0 w-full z-0"></div>
-      </section>
+      </motion.section>
       <section className="text-neutral-700 sm:px-12 px-5 py-10 bg-yellow-400">
-        <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
+        <motion.div initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }} className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
           <h3 className="mb-6 text-3xl font-bold">Testimonials</h3>
           <p className="mb-6 pb-2 md:mb-12 md:pb-0">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
             error amet numquam iure provident voluptate esse quasi, veritatis
             totam voluptas nostrum quisquam eum porro a pariatur veniam.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-6 text-center md:grid-cols-3">
+        <motion.div initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }} className="grid gap-6 text-center md:grid-cols-3">
           <div>
             <div className="block rounded-lg bg-white shadow-lg">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
@@ -428,7 +465,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
       <Contact />
       <Footer />
