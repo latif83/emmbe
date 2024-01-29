@@ -17,7 +17,7 @@ export const Banner = () => {
     <div className={`${styles.banner} text-black`}>
       <Swiper
         autoplay={{
-          delay: 5000,
+          delay: 15000,
           disableOnInteraction: false,
         }}
         effect={"fade"}
