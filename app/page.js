@@ -161,20 +161,16 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="sm:px-12 px-5 grid grid-cols-2 gap-4 py-5">
-        <div className="col-span-1 flex items-center">
-            <p className="text-gray-600 text-lg font-bold">
+      {/* <div className="sm:px-12 px-5 flex flex-col items-center justify-center gap-4 py-5">
+            <p className="text-black text-center text-lg font-bold">
               Explore our construction projects and witness the art of building
               dreams into reality.
             </p>
-        </div>
-        <div className="col-span-1">
-          <video className="w-full h-[300px] object-cover rounded-lg" controls>
+          <video className="w-full max-w-lg h-[300px] object-cover rounded-lg" controls>
             <source src="/vid1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
-      </div>
+      </div> */}
 
       <section className="sm:px-12 px-5">
         <div className={`${styles.ww} flex items-center gap-2 p-5 py-10`}>
