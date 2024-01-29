@@ -1,5 +1,6 @@
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { motion } from "framer-motion";
 
 export const Contact = ()=>{
     return (
@@ -17,7 +18,9 @@ export const Contact = ()=>{
             loading="lazy"
           ></iframe>
         </div>
-        <div className="container px-6 md:px-12">
+        <motion.div initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }} className="container px-6 md:px-12">
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
@@ -170,7 +173,7 @@ export const Contact = ()=>{
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     )
 }
