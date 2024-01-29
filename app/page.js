@@ -142,6 +142,19 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="sm:px-12 px-5 grid grid-cols-2 gap-4 py-5">
+        <div className="col-span-1">
+
+        </div>
+      <div className="col-span-1">
+      <video className="w-full h-[300px] object-cover rounded-lg" controls>
+  <source src="/vid1.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+      </div>
+      </div>
+
       <section className="sm:px-12 px-5">
         <div className={`${styles.ww} flex items-center gap-2 p-5 py-10`}>
           <motion.div initial={{ opacity: 0, x: -100 }}
@@ -467,6 +480,7 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      
       <Contact />
       <Footer />
     </div>

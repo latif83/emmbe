@@ -29,14 +29,14 @@ export const Banner = () => {
         <SwiperSlide>
           <div className="bg-black relative text-white flex items-center justify-center h-full">
             <Image
-              src="/img8.jpg"
+              src="/wimg2.jpg"
               width={500}
               height={500}
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                objectPosition: "top",
+                objectPosition: "center",
               }}
             />
             <div
@@ -82,7 +82,7 @@ export const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="bg-black relative text-white flex items-center justify-center h-full">
-            <Image
+            {/* <Image
               src="/img24.jpg"
               width={500}
               height={500}
@@ -92,7 +92,11 @@ export const Banner = () => {
                 objectFit: "cover",
                 objectPosition: "top",
               }}
-            />
+            /> */}
+            <video className="w-full h-full object-cover" autoPlay loop muted playsInline controls={false}>
+  <source src="/wvid2.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
             <div
               className={`${styles.swipeContent} flex items-center justify-center sm:px-12 px-5`}
             >

@@ -34,7 +34,7 @@ export const Header = () => {
               icon={faFacebook}
               width={20}
               height={20}
-              className="text-sm hover:text-black transition duration-500 ease-in-out"
+              className="text-sm hover:text-gray-400 transition duration-500 ease-in-out"
             />
           </Link>
           <Link href="/">
@@ -42,7 +42,7 @@ export const Header = () => {
               icon={faInstagram}
               width={20}
               height={20}
-              className="text-sm hover:text-black transition duration-500 ease-in-out"
+              className="text-sm hover:text-gray-400 transition duration-500 ease-in-out"
             />
           </Link>
           <Link href="/">
@@ -50,14 +50,14 @@ export const Header = () => {
               icon={faYoutube}
               width={20}
               height={20}
-              className="text-sm hover:text-black transition duration-500 ease-in-out"
+              className="text-sm hover:text-gray-400 transition duration-500 ease-in-out"
             />
           </Link>
         </div>
 
         <div className="flex gap-6">
           <Link
-            className="flex gap-1 items-center hover:text-black duration-500 transition ease-in-out text-sm"
+            className="flex gap-1 items-center hover:text-gray-400 duration-500 transition ease-in-out text-sm"
             href="/"
           >
             <FontAwesomeIcon
@@ -70,7 +70,7 @@ export const Header = () => {
           </Link>
 
           <Link
-            className="flex gap-1 items-center hover:text-black duration-500 transition ease-in-out text-sm"
+            className="flex gap-1 items-center hover:text-gray-400 duration-500 transition ease-in-out text-sm"
             href="/"
           >
             <FontAwesomeIcon
