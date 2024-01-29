@@ -1,4 +1,3 @@
-"use client";
 import {
   faFacebook,
   faInstagram,
@@ -31,215 +30,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
-import "swiper/css/effect-fade";
-import { Footer } from "./components/Footer/Footer";
-import { Contact } from "./components/Contact/Contact";
+import { Contact } from "@/components/Contact/Contact";
+import { Footer } from "@/components/Footer/Footer";
+import { Banner } from "@/components/Banner/banner";
+import { Header } from "@/components/Header/Header";
 
 export default function Home() {
   return (
     <div>
-      <header className="bg-yellow-400">
-        <div className="md:px-12 px-5 py-3 bg-yellow-400 border-b border-dotted text-white sm:flex hidden justify-between">
-          <div className="flex gap-6">
-            <Link href="/">
-              <FontAwesomeIcon
-                icon={faFacebook}
-                width={20}
-                height={20}
-                className="text-sm hover:text-black transition duration-500 ease-in-out"
-              />
-            </Link>
-            <Link href="/">
-              <FontAwesomeIcon
-                icon={faInstagram}
-                width={20}
-                height={20}
-                className="text-sm hover:text-black transition duration-500 ease-in-out"
-              />
-            </Link>
-            <Link href="/">
-              <FontAwesomeIcon
-                icon={faYoutube}
-                width={20}
-                height={20}
-                className="text-sm hover:text-black transition duration-500 ease-in-out"
-              />
-            </Link>
-          </div>
-
-          <div className="flex gap-6">
-            <Link
-              className="flex gap-1 items-center hover:text-black duration-500 transition ease-in-out text-sm"
-              href="/"
-            >
-              <FontAwesomeIcon
-                icon={faPhoneSquare}
-                width={20}
-                height={20}
-                className="text-sm"
-              />
-              0592032456
-            </Link>
-
-            <Link
-              className="flex gap-1 items-center hover:text-black duration-500 transition ease-in-out text-sm"
-              href="/"
-            >
-              <FontAwesomeIcon
-                icon={faEnvelopeOpenText}
-                width={20}
-                height={20}
-                className="text-sm"
-              />
-              contact@embeeconstruction.com
-            </Link>
-          </div>
-        </div>
-        <div className="md:px-12 px-2 py-1 flex justify-between items-center">
-          <div>
-            <Image src="/logo.png" width={120} height={120} className="rounded" />
-          </div>
-          <nav className="sm:flex gap-6 hidden">
-            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
-              Home
-            </Link>
-            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
-              Our Works
-            </Link>
-            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
-              About Us
-            </Link>
-            <Link href="/" className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md">
-              Our Services
-            </Link>
-          </nav>
-          <button
-                      type="button"
-                      className="rounded"
-                    >
-                      <FontAwesomeIcon icon={faBars} width={35} height={35} className="text-2xl" />
-                    </button>
-        </div>
-      </header>
-      <div className={`${styles.banner} text-black`}>
-        <Swiper
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          effect={"fade"}
-          grabCursor={true}
-          loop={true}
-          modules={[Autoplay, EffectFade, Pagination]}
-          className="w-full h-full"
-        >
-          <SwiperSlide>
-            <div className="bg-black relative text-white flex items-center justify-center h-full">
-              <Image
-                src="/img8.jpg"
-                width={500}
-                height={500}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "top",
-                }}
-              />
-              <div
-                className={`${styles.swipeContent} flex items-center sm:px-12 px-5`}
-              >
-                <div className="w-full max-w-xl py-4">
-                  <h1 className="text-white font-bold md:text-5xl text-4xl">
-                    Your Vision, Our Priority
-                  </h1>
-                  <p className="mt-4">
-                    At{" "}
-                    <span className="font-bold">
-                      EMMBE Design and Construction Enterprise
-                    </span>
-                    , we bring your vision to life with over 8 years of proven
-                    expertise. Our commitment extends beyond construction – we
-                    focus on building lasting relationships and delivering
-                    excellence that stands the test of time.
-                  </p>
-                  <div className="mt-4 flex gap-2">
-                    <button
-                      type="button"
-                      className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                    >
-                      OUR PORTFOLIO
-                    </button>
-
-                    <button
-                      type="button"
-                      className="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                    >
-                      GET IN TOUCH
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-black relative text-white flex items-center justify-center h-full">
-              <Image
-                src="/img24.jpg"
-                width={500}
-                height={500}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "top",
-                }}
-              />
-              <div
-                className={`${styles.swipeContent} flex items-center justify-center sm:px-12 px-5`}
-              >
-                <div className="w-full sm:text-center py-4">
-                  <h1 className="text-white font-bold md:text-5xl text-3xl">
-                    Crafting Dreams, Building Legacies
-                  </h1>
-                  <p className="mt-6">
-                    Start a construction journey with{" "}
-                    <span className="font-bold">EMMBE</span>, where we turn
-                    dreams into reality and build lasting legacies. With over 8
-                    years of experience, we are dedicated to top-notch quality,
-                    innovation, and making our clients happy. Join us for more
-                    than just construction – it's a partnership based on trust
-                    and shared success.
-                  </p>
-                  <div className="mt-5 flex justify-center gap-2">
-                    <button
-                      type="button"
-                      className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                    >
-                      OUR PORTFOLIO
-                    </button>
-
-                    <button
-                      type="button"
-                      className="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                    >
-                      GET IN TOUCH
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
+      <Header />
+      <Banner />
       <section
         className={`grid md:grid-cols-3 grid-cols-1 sm:gap-4 gap-8 sm:px-12 px-5 py-7 bg-white ${styles.mission}`}
       >
@@ -367,7 +167,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 sm:mt-10 mt-6">
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
-              <span className="bg-black text-white rounded-full px-3 py-4">
+              <span className="bg-black text-white inline-block rounded-full px-3 py-4">
                 <FontAwesomeIcon
                   icon={faPenRuler}
                   width={30}
@@ -383,7 +183,7 @@ export default function Home() {
 
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
-              <span className="bg-black text-white rounded-full px-3 py-4">
+              <span className="bg-black text-white inline-block rounded-full px-3 py-4">
                 <FontAwesomeIcon
                   icon={faBuildingCircleCheck}
                   width={30}
@@ -399,7 +199,7 @@ export default function Home() {
 
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
-              <span className="bg-black text-white rounded-full px-3 py-4">
+              <span className="bg-black text-white inline-block rounded-full px-3 py-4">
                 <FontAwesomeIcon
                   icon={faHelmetSafety}
                   width={30}
@@ -415,7 +215,7 @@ export default function Home() {
 
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
-              <span className="bg-black text-white rounded-full px-3 py-4">
+              <span className="bg-black text-white inline-block rounded-full px-3 py-4">
                 <FontAwesomeIcon
                   icon={faCalculator}
                   width={30}
@@ -431,7 +231,7 @@ export default function Home() {
 
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
-              <span className="bg-black text-white rounded-full px-3 py-4">
+              <span className="bg-black text-white inline-block rounded-full px-3 py-4">
                 <FontAwesomeIcon
                   icon={faCompassDrafting}
                   width={30}
@@ -447,7 +247,7 @@ export default function Home() {
 
           <div className="col-span-1 shadow-lg p-5 rounded-lg bg-white flex flex-col justify-center items-center gap-4">
             <div>
-              <span className="bg-black text-white rounded-full px-3 py-4">
+              <span className="bg-black text-white inline-block rounded-full px-3 py-4">
                 <FontAwesomeIcon
                   icon={faTruckRampBox}
                   width={30}
@@ -464,7 +264,7 @@ export default function Home() {
         <div className="mt-3 flex items-center justify-center">
           <button
             type="button"
-            className="text-gray-900 bg-gradient-to-r mt-5 from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-lime-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            className="text-gray-900 bg-gradient-to-r mt-5 from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-lime-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex gap-2"
           >
             DISCOVER MORE
             <FontAwesomeIcon
