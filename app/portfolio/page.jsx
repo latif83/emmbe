@@ -13,6 +13,7 @@ import { Grid, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import Image from "next/image";
 import { Footer } from "@/components/Footer/Footer";
 import { useEffect, useState } from "react";
+import styles from './page.module.css'
 
 export default function Portfolio() {
 
@@ -30,16 +31,17 @@ export default function Portfolio() {
   return (
     <div className="">
       <Header />
-      <div className="text-center py-5 bg-gray-800 text-white">
+      <div className={`${styles.ban} bg-gray-800`}>
+      <div className={`text-center py-5 text-white relative z-10`}>
         <h1 className="text-3xl font-bold">Our Works</h1>
         <p className="font-semibold mt-2 text-gray-300">
           Crafted with skill and care to help our clients grow their business!
         </p>
       </div>
 
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 relative z-10">
         {/* Navigation options for sections */}
-        <nav className="flex space-x-4 p-4 bg-gray-800 text-white">
+        <nav className="flex space-x-4 p-4 text-white">
           <a href="#photos" className="hover:text-gray-400">
             Photos
           </a>
@@ -53,6 +55,7 @@ export default function Portfolio() {
             Site Plan
           </a>
         </nav>
+      </div>
       </div>
 
       <div className="flex-1 overflow-y-auto p-4">
