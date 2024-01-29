@@ -11,6 +11,7 @@ import "swiper/css/effect-fade";
 import styles from "./banner.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Banner = () => {
   return (
@@ -62,12 +63,11 @@ export const Banner = () => {
                   excellence that stands the test of time.
                 </p>
                 <div className="mt-4 flex gap-2">
-                  <button
-                    type="button"
+                  <Link href="/portfolio"
                     className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                   >
                     OUR PORTFOLIO
-                  </button>
+                  </Link>
 
                   <button
                     type="button"
@@ -116,12 +116,11 @@ export const Banner = () => {
                   success.
                 </p>
                 <div className="mt-5 flex justify-center gap-2">
-                  <button
-                    type="button"
+                  <Link href="/portfolio"
                     className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                   >
                     OUR PORTFOLIO
-                  </button>
+                  </Link>
 
                   <button
                     type="button"
