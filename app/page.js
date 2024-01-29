@@ -7,6 +7,7 @@ import {
 import {
   faEnvelope,
   faEnvelopeOpen,
+  faUser,
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faArrowRightLong,
@@ -25,6 +26,7 @@ import {
   faPenRuler,
   faPhone,
   faPhoneSquare,
+  faRightLong,
   faTruckRampBox,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -149,14 +151,14 @@ export default function Home() {
               Building your visions. Creating reality.
             </h1>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            With expertise in architectural and structural design, project estimation, construction, renovations, and more, we're committed to transforming your dreams into tangible reality. Explore our services and let's build together!
             </p>
             <button
               type="button"
-              className="text-gray-900 bg-gradient-to-r mt-5 from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+              className="text-gray-900 bg-gradient-to-r mt-5 from-blue-200 via-blue-400 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex gap-2 items-center justify-center"
             >
               DISCOVER MORE
+              <FontAwesomeIcon icon={faRightLong} width={20} height={20} className="text-lg" />
             </button>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.5 }}
@@ -382,9 +384,7 @@ export default function Home() {
                 transition={{ duration: 1 }} className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
           <h3 className="mb-6 text-3xl font-bold">Testimonials</h3>
           <p className="mb-6 pb-2 md:mb-12 md:pb-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-            error amet numquam iure provident voluptate esse quasi, veritatis
-            totam voluptas nostrum quisquam eum porro a pariatur veniam.
+          Listen to the love from our valued customers who have experienced the excellence of EMMBE Design and Construction Enterprise. Read their testimonials and discover the satisfaction that comes from building dreams together.
           </p>
         </motion.div>
 
@@ -395,10 +395,11 @@ export default function Home() {
             <div className="block rounded-lg bg-white shadow-lg">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
+                <img src="/avatar.png" />
               </div>
               <div className="p-6">
-                <h4 className="mb-4 text-2xl font-semibold">Maria Smantha</h4>
+                <h4 className="mb-4 text-2xl font-semibold">Mr.Martin Agyei</h4>
+                <p>Osu - Ghana</p>
                 <hr />
                 <p className="mt-4">
                   <svg
@@ -409,8 +410,7 @@ export default function Home() {
                   >
                     <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
                   </svg>
-                  Lorem ipsum dolor sit amet eos adipisci, consectetur
-                  adipisicing elit.
+                  Exceptional work by EMMBE Design and Construction! The team went above and beyond in turning our vision into reality. From detailed architectural plans to flawless construction, their professionalism and attention to detail were outstanding. Highly recommend for anyone looking to build their dream home.
                 </p>
               </div>
             </div>
@@ -420,10 +420,11 @@ export default function Home() {
             <div className="block rounded-lg bg-white shadow-lg">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#7a81a8]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" />
+                <img src="/avatar.png" />
               </div>
               <div className="p-6">
-                <h4 className="mb-4 text-2xl font-semibold">Lisa Cudrow</h4>
+                <h4 className="mb-4 text-2xl font-semibold">Mrs.Abena Lawson</h4>
+                <p>Tema - Ghana</p>
                 <hr />
                 <p className="mt-4">
                   <svg
@@ -434,8 +435,7 @@ export default function Home() {
                   >
                     <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
                   </svg>
-                  Neque cupiditate assumenda in maiores repudi mollitia
-                  architecto.
+                  Working with EMMBE was a pleasure. Their expertise in project estimation and efficient construction management made our commercial project a success. The team's dedication to quality and meeting deadlines is commendable. I look forward to future collaborations.
                 </p>
               </div>
             </div>
@@ -445,10 +445,11 @@ export default function Home() {
             <div className="block rounded-lg bg-white shadow-lg">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" />
+                <img src="/avatar.png" />
               </div>
               <div className="p-6">
-                <h4 className="mb-4 text-2xl font-semibold">John Smith</h4>
+                <h4 className="mb-4 text-2xl font-semibold">Mr.John Aseidu</h4>
+                <p>Pokuase - Ghana</p>
                 <hr />
                 <p className="mt-4">
                   <svg
@@ -459,8 +460,7 @@ export default function Home() {
                   >
                     <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
                   </svg>
-                  Delectus impedit saepe officiis ab aliquam repellat rem unde
-                  ducimus.
+                  EMMBE transformed our outdated space into a modern masterpiece. The renovation process was smooth, and their commitment to delivering top-notch craftsmanship was evident throughout. The communication and transparency exhibited by the team made the entire experience stress-free. Great job!
                 </p>
               </div>
             </div>
