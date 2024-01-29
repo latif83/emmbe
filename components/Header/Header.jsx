@@ -12,7 +12,7 @@ export const Header = ()=>{
 
     return (
         <header className="bg-yellow-400">
-        <div className="md:px-12 px-5 py-3 bg-yellow-400 border-b border-dotted text-white sm:flex hidden justify-between">
+        <div className="md:px-12 px-5 py-3 bg-black border-dotted text-white sm:flex hidden justify-between">
           <div className="flex gap-6">
             <Link href="/">
               <FontAwesomeIcon
