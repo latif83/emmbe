@@ -1,0 +1,113 @@
+.banner{
+    height: 500px;
+    /* background-image: url("/img6.jpg");
+    background-size: cover;
+    background-position: top; */
+}
+
+.wImgCon{
+    height: 250px;
+}
+
+.wImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.wAbs{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.mission{
+    background-image: url('/bg_pattern.png');
+    /* background-size: contain; */
+    background-position: left;
+    position: relative;
+}
+
+.mission::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: radial-gradient(at center center, #FFFFFFCC 0%, #ffffff 100%);
+    opacity: 1;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.ww{
+    background-color: #f9f9f9;
+    background-image: url('/curved_lines.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.ww::after{
+    position: absolute;
+    content: "";
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    opacity: 0.85;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.wwIn{
+    border: 1px solid black;
+}
+
+.wwIn::after{
+    position: absolute;
+    content: "";
+    bottom: -3%;
+    left: -3%;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    border: 1px solid black;
+}
+
+.wwch1{
+    width: 60%;
+}
+
+.wwch2{
+    width: 40%;
+}
+
+@media(max-width:500px){
+    .banner{
+        height: 90svh;
+    }
+    .wImgCon{
+        height: 150px;
+    }
+    .ww{
+        flex-wrap: wrap;
+    }
+    .wwch1,.wwch2{
+        width: 100%;
+    }
+}
+
+.swipeContent{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.425);
+}
