@@ -42,7 +42,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
-      <Header />
+      <Header page="home" />
       <Banner />
       <section
         className={`grid md:grid-cols-3 grid-cols-1 sm:gap-4 gap-8 sm:px-12 px-5 py-7 bg-white ${styles.mission}`}
@@ -79,9 +79,9 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1 }}
             type="button"
-            className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm text-center"
           >
-            LEARN MORE
+            <Link className="px-5 py-2.5 inline-flex" href="/about">LEARN MORE</Link>
           </motion.button>
         </div>
         <div className="col-span-2 relative z-10 grid grid-cols-2 gap-2 relative">
@@ -191,15 +191,16 @@ export default function Home() {
             </p>
             <button
               type="button"
-              className="text-gray-900 bg-gradient-to-r mt-5 from-blue-200 via-blue-400 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex gap-2 items-center justify-center"
+              className="text-gray-900 bg-gradient-to-r mt-5 from-blue-200 via-blue-400 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center flex gap-2 items-center justify-center"
             >
+              <Link className="px-5 py-2.5 inline-flex" href="/services">
               DISCOVER MORE
               <FontAwesomeIcon
                 icon={faRightLong}
                 width={20}
                 height={20}
                 className="text-lg"
-              />
+              /></Link>
             </button>
           </motion.div>
           <motion.div
@@ -348,15 +349,16 @@ export default function Home() {
         >
           <button
             type="button"
-            className="text-gray-900 bg-gradient-to-r mt-5 from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-lime-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex gap-2"
+            className="text-gray-900 bg-gradient-to-r mt-5 from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-lime-500/50 font-medium rounded-lg text-sm text-center flex gap-2"
           >
+            <Link className="inline-flex px-5 py-2.5" href="/services">
             DISCOVER MORE
             <FontAwesomeIcon
               icon={faArrowRightLong}
               width={20}
               height={20}
               className="text-md ml-1"
-            />
+            /></Link>
           </button>
         </motion.div>
       </section>

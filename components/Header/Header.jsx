@@ -17,7 +17,7 @@ import styles from "./Header.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export const Header = () => {
+export const Header = ({page}) => {
   const [openMNav, setOpenMNav] = useState(false);
 
   return (
@@ -90,31 +90,31 @@ export const Header = () => {
         style={{ position: "sticky", top: 0 }}
         className="md:px-12 px-2 py-1 flex justify-between items-center"
       >
-        <div>
+        <Link href="/">
           <Image src="/logo.png" width={120} height={120} className="rounded" />
-        </div>
+        </Link>
         <nav className="sm:flex gap-6 hidden">
           <Link
             href="/"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+            className={`${page=='home' ? 'text-black font-bold' : 'text-gray-700'} text-md hover:font-bold hover:text-black`}
           >
             Home
           </Link>
           <Link
             href="/portfolio"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+            className={`${page=='portfolio' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             Our Works
           </Link>
           <Link
-            href="/"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+            href="/about"
+            className={`${page=='about' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             About Us
           </Link>
           <Link
-            href="/"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+           href="/services"
+           className={`${page=='services' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             Our Services
           </Link>
@@ -135,7 +135,7 @@ export const Header = () => {
       </motion.div>
       {openMNav && (
           <nav
-            className={`${styles.mbNavLinks} animate__animated animate__backInUp p-5 flex flex-col gap-4 text-black items-center font-bold text-lg bg-yellow-400`}
+            className={`${styles.mbNavLinks} animate__animated animate__backInUp p-5 flex flex-col gap-6 text-black items-center font-bold text-lg bg-yellow-400`}
           >
             <div className="w-full flex justify-end">
               <FontAwesomeIcon
@@ -149,26 +149,26 @@ export const Header = () => {
               />
             </div>
             <Link
-            href="/"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+           href="/"
+           className={`${page=='home' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             Home
           </Link>
           <Link
             href="/portfolio"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+            className={`${page=='portfolio' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             Our Works
           </Link>
           <Link
-            href="/"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+            href="/about"
+            className={`${page=='about' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             About Us
           </Link>
           <Link
-            href="/"
-            className="text-gray-700 font-semibold hover:font-bold hover:text-black text-md"
+            href="/services"
+            className={`${page=='services' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
           >
             Our Services
           </Link>

@@ -38,16 +38,16 @@ export default function Portfolio() {
     },[])
   return (
     <div className="">
-      <Header />
+      <Header page="portfolio" />
       <div className={`${styles.ban} bg-gray-800`}>
       <div className={`text-center py-5 text-white relative z-10`}>
         <h1 className="text-3xl font-bold">Our Works</h1>
-        <p className="font-semibold mt-2 text-gray-300">
+        <p className="font-light mt-2 text-gray-300">
           Crafted with skill and care to help our clients grow their business!
         </p>
       </div>
 
-      <div className="flex-shrink-0 relative z-10">
+      <div className="flex-shrink-0 relative z-10 sm:p-0 pt-3">
         {/* Navigation options for sections */}
         <nav className="flex space-x-4 p-4 text-white">
           <a href="#photos" className="hover:text-gray-400">
