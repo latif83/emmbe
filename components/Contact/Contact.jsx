@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const Contact = ()=>{
     return (
-        <section className="mb-32">
+        <section className="mb-16">
         <div
           id="map"
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
@@ -21,7 +21,9 @@ export const Contact = ()=>{
         <motion.div id="getInTouch" initial={{ opacity: 0, y: -100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }} className="container px-6 md:px-12">
+                  
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
+          <h1 className="text-xl font-bold py-5">GET IN TOUCH</h1>
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
                 <form>

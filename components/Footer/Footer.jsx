@@ -1,127 +1,161 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTiktok,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="bg-gray-800 py-4 text-gray-100">
-        <div className="container px-4 mx-auto">
-          <div className="-mx-4 flex flex-wrap justify-between">
-            <div className="w-full flex items-center justify-center xl:w-1/3">
-              <a href="/" className="block w-56 mb-5 bg-white p-2">
-                <Image src="/logo.png" width={200} height={200} />
-              </a>
-              {/* <p>
-            EMMBE Design and Construction Enterprise, formed through the merger with Mensco Construction, excels in Ghana's construction industry. With an 8-year track record, it specializes in high-quality projects, emphasizing prompt delivery and excellence in architectural and structural services, project estimation, and various construction works.
-            </p> */}
-            </div>
+    <footer className="text-center bg-neutral-600 text-neutral-200 lg:text-left">
+      <div className="flex sm:flex-row sm:gap-0 gap-4 flex-col items-center justify-center border-b-2 border-neutral-500 p-6 lg:justify-between">
+        <div className="mr-12 block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <div className="flex justify-center">
+          <Link
+            href="https://web.facebook.com/emmbeconstruction1"
+            className="mr-6 text-neutral-200"
+          >
+            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.tiktok.com/@emmbeconstruction1?is_from_webapp=1&sender_device=pc"
+            className="mr-6 text-neutral-200"
+          >
+            <FontAwesomeIcon icon={faTiktok} className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.youtube.com/channel/UCxTRirLa1FZd9sRjTRuaniA"
+            className="text-neutral-200"
+          >
+            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
+          </Link>
+        </div>
+      </div>
 
-            <div className="px-4 my-4 w-full xl:w-auto">
-              <div>
-                <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-yellow-400">
-                  Company
-                </h2>
-              </div>
-              <ul className="leading-8">
-                <li>
-                  <a href="#" className="hover:text-yellow-400">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-yellow-400">
-                    Terms &amp; Conditions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-yellow-400">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-yellow-400">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* <div className="px-4 my-4 w-full sm:w-auto">
-            <div>
-              <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-yellow-600">Blog</h2>
-            </div>
-            <ul className="leading-8">
-              <li><a href="#" className="hover:text-yellow-400">Getting Started With HTML and CSS</a></li>
-              <li><a href="#" className="hover:text-yellow-400">What Is Flex And When to Use It?</a></li>
-              <li><a href="#" className="hover:text-yellow-400">How TailwindCSS Can Help Your Productivity?</a></li>
-              <li><a href="#" className="hover:text-yellow-400">5 Tips to Make Responsive Website</a></li>
-              <li><a href="#" className="hover:text-yellow-400">See More</a></li>
-            </ul>
-          </div> */}
-            <div className="px-4 my-4 w-full sm:w-auto xl:w-1/3">
-              <div>
-                <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-yellow-400">
-                  Connect With Us
-                </h2>
-              </div>
-              <div className="flex gap-2">
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-yellow-400 hover:border-yellow-400"
-                >
-                  <svg
-                    className="w-4 h-4 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512"
-                  >
-                    <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-yellow-400 hover:border-yellow-400"
-                >
-                  <svg
-                    className="w-4 h-4 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-yellow-400 hover:border-yellow-400"
-                >
-                  <svg
-                    className="w-4 h-4 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"
-                  >
-                    <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+      <div className="mx-6 py-10 text-center md:text-left">
+        <div className="grid-1 grid gap-12 sm:gap-8 md:grid-cols-3 lg:grid-cols-3">
+          <div className="">
+            <h6 className="mb-4 flex flex-col gap-4 justify-center font-semibold uppercase md:justify-start">
+              <Image
+                src="/icon.png"
+                width={300}
+                height={300}
+                className="h-20 w-20 bg-neutral-100 p-3 rounded-full shadow-lg"
+              />
+              EMMBE DESIGN AND CONSTRUCTION ENTERPRISE
+            </h6>
+
+            <p>Quality Work is our Priority.</p>
+          </div>
+          <div className="sm:text-center text-start flex flex-col sm:items-center items-start">
+            <h6 className="mb-4 underline-offset-8 flex sm:justify-center justify-start font-semibold uppercase">
+              Useful links
+            </h6>
+            <p className="mb-4">
+              <Link href="/" className="text-neutral-200">
+                Home
+              </Link>
+            </p>
+            <p className="mb-4">
+              <Link
+                href="/about"
+                className="text-neutral-200"
+              >
+                About Us
+              </Link>
+            </p>
+            <p className="mb-4">
+              <Link
+                href="/portfolio"
+                className="text-neutral-200"
+              >
+                Our Works
+              </Link>
+            </p>
+            <p>
+              <Link href="/" className="text-neutral-200">
+                Our Services
+              </Link>
+            </p>
+          </div>
+          <div className="sm:text-center sm:flex flex-col justify-center">
+            <h6 className="mb-4 flex sm:justify-center font-semibold uppercase justify-start">
+              Contact
+            </h6>
+            <p className="mb-4 flex items-center sm:justify-center justify-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="mr-3 h-5 w-5"
+              >
+                <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+              </svg>
+              Block A, SSNIT Flats, 10 Anaji Rd Takoradi
+            </p>
+            <p className="mb-4 flex items-center sm:justify-center justify-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="mr-3 h-5 w-5"
+              >
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+              </svg>
+              emmbeconstruction@gmail.com
+            </p>
+            <p className="mb-4 flex items-center sm:justify-center justify-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="mr-3 h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              +233 241 970 156
+            </p>
+            <p className="flex items-center sm:justify-center justify-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="mr-3 h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              +233 248 347 434
+            </p>
           </div>
         </div>
       </div>
-      <div className="bg-yellow-400 py-4 text-gray-700">
-        <div className="container mx-auto px-4">
-          <div className="-mx-4 flex flex-wrap justify-between">
-            <div className="px-4 w-full text-center sm:w-auto sm:text-left">
-              Copyright © 2023 EMMBEE. All Rights Reserved.
-            </div>
-            <div className="px-4 w-full text-center sm:w-auto sm:text-left">
-              Made with ❤️ by Abdul-Latif.
-            </div>
-          </div>
-        </div>
+
+      <div className="p-6 text-center bg-neutral-800">
+        <p className="mb-5">© 2024 Copyright</p>
+        <span>Made with 🥰 By: </span>
+        <Link
+          className="font-semibold text-neutral-600 dark:text-neutral-400"
+          href="https://latif83.netlify.app"
+        >
+          Abdul-Latif
+        </Link>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
