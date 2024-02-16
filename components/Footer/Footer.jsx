@@ -43,7 +43,7 @@ export const Footer = () => {
           <div className="">
             <h6 className="mb-4 flex flex-col gap-4 justify-center font-semibold uppercase md:justify-start">
               <Image
-                src="/icon.png"
+                src="/ICON.png"
                 width={300}
                 height={300}
                 className="h-20 w-20 bg-neutral-100 p-3 rounded-full shadow-lg"
