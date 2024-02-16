@@ -85,10 +85,10 @@ export const Footer = () => {
             </p>
           </div>
           <div className="sm:text-center sm:flex flex-col justify-center">
-            <h6 className="mb-4 flex sm:justify-center font-semibold uppercase justify-start">
+            <h6 className="mb-4 flex font-semibold uppercase justify-start">
               Contact
             </h6>
-            <p className="mb-4 flex items-center sm:justify-center justify-start">
+            <p className="mb-4 flex justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ export const Footer = () => {
               </svg>
               Block A, SSNIT Flats, 10 Anaji Rd Takoradi
             </p>
-            <p className="mb-4 flex items-center sm:justify-center justify-start">
+            <p className="mb-4 flex justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -112,7 +112,7 @@ export const Footer = () => {
               </svg>
               emmbeconstruction@gmail.com
             </p>
-            <p className="mb-4 flex items-center sm:justify-center justify-start">
+            <p className="mb-4 flex justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ export const Footer = () => {
               </svg>
               +233 241 970 156
             </p>
-            <p className="flex items-center sm:justify-center justify-start">
+            <p className="flex justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
