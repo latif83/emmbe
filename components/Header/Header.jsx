@@ -1,6 +1,7 @@
 import {
   faFacebook,
   faInstagram,
+  faTiktok,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -25,7 +26,7 @@ export const Header = ({ page }) => {
         className="md:px-12 px-5 py-2 bg-black border-dotted text-white sm:flex hidden justify-between"
       >
         <div className="flex gap-6">
-          <Link href="/">
+          <Link href="https://web.facebook.com/emmbeconstruction1">
             <FontAwesomeIcon
               icon={faFacebook}
               width={20}
@@ -33,15 +34,15 @@ export const Header = ({ page }) => {
               className="text-sm hover:text-gray-400 transition duration-500 ease-in-out"
             />
           </Link>
-          <Link href="/">
+          <Link href="https://www.tiktok.com/@emmbeconstruction1?is_from_webapp=1&sender_device=pc">
             <FontAwesomeIcon
-              icon={faInstagram}
+              icon={faTiktok}
               width={20}
               height={20}
               className="text-sm hover:text-gray-400 transition duration-500 ease-in-out"
             />
           </Link>
-          <Link href="/">
+          <Link href="https://www.youtube.com/channel/UCxTRirLa1FZd9sRjTRuaniA">
             <FontAwesomeIcon
               icon={faYoutube}
               width={20}
@@ -54,7 +55,7 @@ export const Header = ({ page }) => {
         <div className="flex gap-6">
           <Link
             className="flex gap-1 items-center hover:text-gray-400 duration-500 transition ease-in-out text-sm"
-            href="/"
+            href="tel:0248347434"
           >
             <FontAwesomeIcon
               icon={faPhoneSquare}
@@ -62,12 +63,12 @@ export const Header = ({ page }) => {
               height={20}
               className="text-sm"
             />
-            0592032456
+            0248347434
           </Link>
 
           <Link
             className="flex gap-1 items-center hover:text-gray-400 duration-500 transition ease-in-out text-sm"
-            href="/"
+            href="mailto:emmbeconstruction@gmail.com"
           >
             <FontAwesomeIcon
               icon={faEnvelopeOpenText}
@@ -75,7 +76,7 @@ export const Header = ({ page }) => {
               height={20}
               className="text-sm"
             />
-            contact@embeeconstruction.com
+            emmbeconstruction@gmail.com
           </Link>
         </div>
       </div>
