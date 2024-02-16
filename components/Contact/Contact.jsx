@@ -10,7 +10,7 @@ export const Contact = ()=>{
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d254085.1210921602!2d-0.30187024918229133!3d5.701579516699301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d5.6970183!2d-0.2725683!4m5!1s0xfdf7fcc2ebb0a03%3A0x654ebc89b67cbfe8!2sE.M.B%20CONSTRUCTION%20COMPANY%20LTD%2C%20Appolonia%20-%20Afienya%20Rd%2C%20Tema!3m2!1d5.7836994!2d-0.033657599999999996!5e0!3m2!1sen!2sgh!4v1706488403101!5m2!1sen!2sgh"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3975.0512582213782!2d-1.7748633250192338!3d4.931081295044955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNTUnNTEuOSJOIDHCsDQ2JzIwLjIiVw!5e0!3m2!1sen!2sgh!4v1708074570359!5m2!1sen!2sgh"
             width="100%"
             height="480"
             style={{border:0}}

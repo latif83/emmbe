@@ -38,6 +38,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { Banner } from "@/components/Banner/banner";
 import { Header } from "@/components/Header/Header";
 import { motion } from "framer-motion";
+import { TeamMembers } from "@/components/team/team";
 
 export default function Home() {
   return (
@@ -81,7 +82,9 @@ export default function Home() {
             type="button"
             className="text-gray-900 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-yellow-500/50 font-medium rounded-lg text-sm text-center"
           >
-            <Link className="px-5 py-2.5 inline-flex" href="/about">LEARN MORE</Link>
+            <Link className="px-5 py-2.5 inline-flex" href="/about">
+              LEARN MORE
+            </Link>
           </motion.button>
         </div>
         <div className="col-span-2 relative z-10 grid grid-cols-2 gap-2 relative">
@@ -194,13 +197,14 @@ export default function Home() {
               className="text-gray-900 bg-gradient-to-r mt-5 from-blue-200 via-blue-400 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center flex gap-2 items-center justify-center"
             >
               <Link className="px-5 py-2.5 inline-flex" href="/services">
-              DISCOVER MORE
-              <FontAwesomeIcon
-                icon={faRightLong}
-                width={20}
-                height={20}
-                className="text-lg"
-              /></Link>
+                DISCOVER MORE
+                <FontAwesomeIcon
+                  icon={faRightLong}
+                  width={20}
+                  height={20}
+                  className="text-lg"
+                />
+              </Link>
             </button>
           </motion.div>
           <motion.div
@@ -352,13 +356,14 @@ export default function Home() {
             className="text-gray-900 bg-gradient-to-r mt-5 from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 shadow-lg shadow-lime-500/50 font-medium rounded-lg text-sm text-center flex gap-2"
           >
             <Link className="inline-flex px-5 py-2.5" href="/services">
-            DISCOVER MORE
-            <FontAwesomeIcon
-              icon={faArrowRightLong}
-              width={20}
-              height={20}
-              className="text-md ml-1"
-            /></Link>
+              DISCOVER MORE
+              <FontAwesomeIcon
+                icon={faArrowRightLong}
+                width={20}
+                height={20}
+                className="text-md ml-1"
+              />
+            </Link>
           </button>
         </motion.div>
       </section>
@@ -545,6 +550,10 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
+      </section>
+
+      <section className="bg-white">
+        <TeamMembers />
       </section>
 
       <Contact />

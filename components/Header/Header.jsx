@@ -1,4 +1,3 @@
-"use client";
 import {
   faFacebook,
   faInstagram,
@@ -14,15 +13,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Header.module.css";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { MNav } from "../mNav/MNav";
 
-export const Header = ({page}) => {
-  const [openMNav, setOpenMNav] = useState(false);
-
+export const Header = ({ page }) => {
   return (
-    <header className="bg-yellow-400 relative">
-      <motion.div
+    <header className="bg-yellow-400">
+      <div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -82,12 +78,8 @@ export const Header = ({page}) => {
             contact@embeeconstruction.com
           </Link>
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        style={{ position: "sticky", top: 0 }}
+      </div>
+      <div
         className="md:px-12 px-2 py-1 flex justify-between items-center"
       >
         <Link href="/">
@@ -96,84 +88,39 @@ export const Header = ({page}) => {
         <nav className="sm:flex gap-6 hidden">
           <Link
             href="/"
-            className={`${page=='home' ? 'text-black font-bold' : 'text-gray-700'} text-md hover:font-bold hover:text-black`}
+            className={`${
+              page == "home" ? "text-black font-bold" : "text-gray-700"
+            } text-md hover:font-bold hover:text-black`}
           >
             Home
           </Link>
           <Link
             href="/portfolio"
-            className={`${page=='portfolio' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
+            className={`${
+              page == "portfolio" ? "text-black font-bold" : "text-gray-700"
+            } hover:font-bold hover:text-black text-md`}
           >
             Our Works
           </Link>
           <Link
             href="/about"
-            className={`${page=='about' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
-          >
-            About Us
-          </Link>
-          <Link
-           href="/services"
-           className={`${page=='services' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
-          >
-            Our Services
-          </Link>
-        </nav>
-        
-        <button
-          onClick={() => setOpenMNav(true)}
-          type="button"
-          className="rounded sm:hidden"
-        >
-          <FontAwesomeIcon
-            icon={faBars}
-            width={30}
-            height={30}
-            className="text-xl"
-          />
-        </button>
-      </motion.div>
-      {openMNav && (
-          <nav
-            className={`${styles.mbNavLinks} animate__animated animate__backInUp p-5 flex flex-col gap-6 text-black items-center font-bold text-lg bg-yellow-400`}
-          >
-            <div className="w-full flex justify-end">
-              <FontAwesomeIcon
-                onClick={() => setOpenMNav(false)}
-                style={{ fontSize: "3em" }}
-                className="mb-5"
-                icon={faXmark}
-                width={30}
-                height={30}
-                color="red"
-              />
-            </div>
-            <Link
-           href="/"
-           className={`${page=='home' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/portfolio"
-            className={`${page=='portfolio' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
-          >
-            Our Works
-          </Link>
-          <Link
-            href="/about"
-            className={`${page=='about' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
+            className={`${
+              page == "about" ? "text-black font-bold" : "text-gray-700"
+            } hover:font-bold hover:text-black text-md`}
           >
             About Us
           </Link>
           <Link
             href="/services"
-            className={`${page=='services' ? 'text-black font-bold' : 'text-gray-700'} hover:font-bold hover:text-black text-md`}
+            className={`${
+              page == "services" ? "text-black font-bold" : "text-gray-700"
+            } hover:font-bold hover:text-black text-md`}
           >
             Our Services
           </Link>
-          </nav>
-        )}
+        </nav>
+        <MNav />
+      </div>
     </header>
   );
 };

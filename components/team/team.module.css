@@ -1,0 +1,12 @@
+.img{
+    width: 300px !important;
+    height: 300px !important;
+    flex-shrink: 0;
+}
+
+@media(max-width:763px){
+    .img{
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
