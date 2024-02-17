@@ -132,9 +132,9 @@ export default function Services() {
                 height={20}
               />
             </div>
-            <h3 className="font-bold mb-3">Sale of Building Materials and Hardware</h3>
+            <h3 className="font-bold mb-3">Sale of Building Materials</h3>
             <p>
-            High-quality building materials and hardware available for purchase.
+            High-quality building materials available for purchase.
             </p>
           </div>
           <div className="col-span-1 shadow-lg p-3 rounded-lg border">

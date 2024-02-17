@@ -26,7 +26,7 @@ export default function AboutUs() {
           Consultancy. The enterprise primarily focus is to set the standards
           for the local construction industry in terms of delivering
           high-quality projects within the project duration and with high
-          consideration to the
+          consideration to the Client's specifications and expectations.
         </p>
 
         <h3 className="text-LG font-semibold mt-5 mb-2">OUR OBJECTIVES</h3>

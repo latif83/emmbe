@@ -35,7 +35,7 @@ export const TeamMembers = () => {
               CEO
             </span>
             <p className="mt-3 mb-4 font-light text-gray-500">
-              As the CEO and Quality Surveyor/Estimator at{" "}
+              As the CEO and Quantity surveyor/Estimator at{" "}
               <b>EMMBE CONSTRUCTION</b>, I'm proud to lead a team dedicated to
               delivering exceptional construction projects. Our commitment to
               quality, innovation, and customer satisfaction drives everything
