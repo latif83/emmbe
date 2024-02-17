@@ -460,7 +460,7 @@ export default function Home() {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="grid gap-6 text-center md:grid-cols-3"
+          className="grid gap-6 text-center md:grid-cols-4"
         >
         <Feedback />
         </motion.div>
